@@ -32,8 +32,8 @@ module.exports = function(grunt) {
   // Load Grunt plugin
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  //grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Register Grunt tasks
-  grunt.registerTask("default", ["sass", "uglify"]);
+  grunt.registerTask("default", ["sass", "uglify", "concat"]);
 };
