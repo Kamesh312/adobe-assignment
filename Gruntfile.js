@@ -1,13 +1,7 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
-    sass: {
-      dist: {
-        files: {
-          'menu.css': 'menu.scss'
-        }
-      }
-    },
+    
     uglify: {
       "presets": [
         "stage-3"
@@ -21,10 +15,10 @@ module.exports = function(grunt) {
   }
   });
   // Load Grunt plugins
-  grunt.loadNpmTasks("grunt-contrib-sass");
+  //grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   //grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Register Grunt tasks
-  grunt.registerTask("default", ["sass", "uglify"]);
+  grunt.registerTask("default", ["sass"]);
 };
