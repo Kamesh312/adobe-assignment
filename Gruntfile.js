@@ -18,7 +18,7 @@ module.exports = function(grunt) {
               'menu_parse.min.js': 'menu_parse.js'
           }
       }
-  },
+  }/*,
   concat: {
       options: {
         separator: ';',
@@ -28,12 +28,13 @@ module.exports = function(grunt) {
         dest: 'menu-compressed.min.js',
       },
     }
+    */
   });
   // Load Grunt plugin
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Register Grunt tasks
-  grunt.registerTask("default", ["sass", "uglify", "concat"]);
+  grunt.registerTask("default", ["sass", "uglify"/*, "concat"*/]);
 };
