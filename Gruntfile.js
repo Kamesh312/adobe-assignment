@@ -18,22 +18,13 @@ module.exports = function(grunt) {
               'menu_parse.min.js': 'menu_parse.js'
           }
       }
-  },
-  concat: {
-      options: {
-        separator: ';',
-      },
-      dist: {
-        src: ['menu.min.js', 'menu_parse.min.js'],
-        dest: 'menu-compressed.min.js',
-      },
-    }
+  }
   });
   // Load Grunt plugins
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Register Grunt tasks
-  grunt.registerTask("default", ["sass", "uglify", "concat"]);
+  grunt.registerTask("default", ["sass", "uglify"]);
 };
